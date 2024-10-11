@@ -1,0 +1,2 @@
+include ':LibStatistics',':LibBuglyStats','LibUmengStats','LibCustomStats','bonree'
+include 'app'

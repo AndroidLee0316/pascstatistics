@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="20dp"
+    android:columnCount="1"
+    android:rowCount="12"
+    >
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingTop="10dp"
+      android:text="Bug统计测试，NullPointException"
+      />
+  <Button
+      android:id="@+id/btn_crash"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="崩溃"
+      />
+
+  <TextView
+      android:id="@+id/statistics_type"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingTop="10dp"
+      android:text="友盟统计"
+      android:textColor="#f0ff0000"
+      />
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingTop="10dp"
+      android:text="EventID：Event1"
+      />
+  <Button
+      android:id="@+id/btn_on_event1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="事件1"
+      />
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingTop="10dp"
+      android:text="EventID：Event2, label2"
+      />
+  <Button
+      android:id="@+id/btn_on_event2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="事件2"
+      />
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingTop="10dp"
+      android:text="EventID：Event3, key1:value1, key2:value2"
+      />
+  <Button
+      android:id="@+id/btn_on_event3"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="事件3"
+      />
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingTop="10dp"
+      android:text="EventID：Event4,label4, key3:value3, key4:value4"
+      />
+  <Button
+      android:id="@+id/btn_on_event4"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="事件4"
+      />
+  <Button
+      android:id="@+id/btn_on_event5"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="事件5(onEven 4个参数)"
+      />
+  <Button
+      android:id="@+id/btn_on_event6"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="事件6(onEven 5个参数)"
+      />
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingTop="10dp"
+      android:text="PageName：main"
+      />
+  <Button
+      android:id="@+id/btn_on_page_start"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="页面启动"
+      />
+
+  <TextView
+      android:text="友盟设备信息，用于集成测试添加设备"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      />
+  <TextView
+      android:id="@+id/tv_device_info"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      />
+
+</GridLayout>

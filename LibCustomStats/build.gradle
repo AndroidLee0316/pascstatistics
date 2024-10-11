@@ -1,0 +1,47 @@
+apply plugin: 'com.android.library'
+apply from: 'uploadArchives.gradle'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled isRelease=='true'?false:false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+
+    api LIB_NET
+    api LIB_BASE
+    api LIB_REPORT_DATA
+    implementation files("libs/libscom.pasc.lib.reportData-1.1.6.aar")
+    if (isMavenBuild == 'false') {
+        api project(':LibStatistics')
+    } else {
+             api "com.zxs.lib:statistics:1.0.0"
+    }
+}
+task sourceJar (type:Jar) {
+    classifier = 'sources'
+    from 'src/main/java'
+}
+
+artifacts {
+    archives sourceJar
+}

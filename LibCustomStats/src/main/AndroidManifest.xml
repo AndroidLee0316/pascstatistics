@@ -1,0 +1,10 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.pasc.lib.stats.custom">
+
+  <application>
+    <service
+        android:name="com.pasc.lib.statistics.custom.ReportService"
+        android:enabled="true">
+    </service>
+  </application>
+</manifest>
